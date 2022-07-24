@@ -1,0 +1,229 @@
+/*using digital font for timer (Took reference form the internet)*/
+
+@font-face {
+    font-family: digital;
+    src: url(digital.otf);
+}
+/* removing the default properties of the page*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Initalizing the container size */
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(218, 207, 207);
+    
+}
+.outerLayer
+{
+    width: 60%;
+    min-width: 500px;
+    max-width: 500px;
+    height: 50%; 
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px black inset;
+}
+.footer
+{
+    color: rgb(56, 47, 47);;
+    display: flex;
+    margin: 10px 10px 10px 13px;
+    min-height: 80px;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px black;   
+}
+
+.footer p{
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(56, 47, 47);
+    margin-left: 20px;
+}
+
+/* styling the display for stopwatch timer*/
+.watch-container
+{
+    border-radius: 15px;
+    width: 95%;
+    margin: 10px 10px 0px 13px;
+    height: 300px;
+    overflow: hidden;
+    background-color: rgb(155, 152, 152);
+
+}
+.timer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    border: 0.5px solid rgba(119, 113, 113, 0.719);
+    box-shadow: 2px 2px 2px 3px  rgba(119, 113, 113, 0.719)
+    
+}
+.timer p{
+    color: rgb(20, 19, 19);
+    font-family: digital;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+/* styling and adjusting the buttons using flex properties*/
+.button
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50%;
+    
+}
+
+.btn{
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 30%;
+    font-size: 1.8rem;
+    box-shadow: 2px 2px 2px 3px  rgb(32, 31, 31);
+    border-radius: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:  rgb(50, 47, 47);
+}
+
+/*setting the color for fa-icon which is using in buttons*/
+#start 
+{
+   color: green; 
+}
+#stop 
+{
+   color: maroon; 
+}
+#reset 
+{
+   color: white;
+}
+
+.btn p{
+    padding-left: 8px;
+    color: white;
+}
+
+/*Button hover effect, size and colour will change*/
+#start:hover
+{
+    background-color: green;
+    min-width: 140px;
+    height: 50px;
+    box-shadow: 2px 2px 2px 4px  rgb(32, 31, 31);
+    border-radius: 20px;
+    color: white;
+    font-size: 2rem;
+}
+#stop:hover
+{
+    background-color: maroon;
+    min-width: 140px;
+    height: 50px;
+    box-shadow: 2px 2px 2px 4px  rgb(32, 31, 31);
+    border-radius: 20px;
+    color: white;
+    font-size: 2rem;
+}
+#reset:hover
+{
+    background-color:  rgb(50, 47, 47);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 140px;
+    height: 50px;
+    box-shadow: 2px 2px 2px 4px  rgb(32, 31, 31);
+    border-radius: 20px;
+    color: white;
+    font-size: 2rem;
+}
+
+
+/* set animation property for the button when user click on it*/
+.btn:active
+{
+    transform: translateY(6px);
+}
+
+
+
+/*Below CSS styling for toggle button,
+set the color and background for darkmode and lightmode*/
+.darkmode{
+    
+    display: flex;
+    margin: 10px 10px 10px 13px;
+    min-height: 30px;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px black;
+
+}
+.darkmode p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(55, 53, 53);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    padding: 10px;
+
+}
+
+#toggle
+{
+    background-color: rgb(124, 120, 120);
+    width: 140px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+   
+}
+
+#circleBtn
+{
+
+    width: 35px;
+    height: 28px;
+    background-color: black;
+    border-radius: 50%;
+    margin-top: 1px;
+    transition-duration: 1s;
+    margin-left: 1px;
+}
+.lightmode
+{
+    background-color: whitesmoke;
+}
+.drkmode
+{
+    background-color: rgb(218, 207, 207);
+}
+.drkmode2
+{
+    background-color: rgb(155, 152, 152);
+}
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Calling the external CSS file-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Calling the fontAwesome libaray file-->
+    <link rel="stylesheet" href="css/all.css">
+    <title>Stop-Watch</title>
+</head>
+<body>
+    <!-- set the container of the page -->
+    <div class="container" id="bck-color">
+        <div class="outerLayer" id="bck-color">
+            <!-- This division is for dispaly of the timer-->
+            <div class="watch-container" id="bck-color-2">
+                <div class="timer">
+                    <p id="minute-2">0</p>
+                    <p id="minute-1">0</p>
+                    <p>:</p>
+                    <p id="second-2">0</p>
+                    <p id="second-1">0</p>
+                    <p>:</p>
+                    <p id="mSecond-2">0</p>
+                    <p id="mSecond-1">0</p>
+                </div>
+                <!-- Divsions for the timer Button-->
+                <div class="button">
+                    <div class="btn" id="start">
+                        <i class="fa-solid fa-play"></i>
+                        <p>Start</p>
+                    </div>
+                    <div class="btn" id="stop">
+                        <i class="fa-solid fa-stop"></i>
+                        <p>Stop</p>
+                    </div>
+                    <div class="btn" id="reset">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <p>Reset</p>
+                    </div>
+                </div>
+            </div>
+            <!--divisions for the Dark Mode feature-->
+            <div class="darkmode">
+                <p id="darkText">DarkMode Off</p>
+                <div id="toggle">
+                    <div id="circleBtn"></div>
+                </div>
+            </div>
+            <!--Division for name of the Watch(StopWatch)-->
+            <div class="footer">
+                <i class="fa-solid fa-stopwatch fa-3x"></i>
+                <p> Stop-Watch</p>
+            </div>
+        </div>
+    </div>
+
+<!-- Calling the External Javascript code-->    
+<script src="js/stopWatch.js"></script>
+</body>
+</html>
